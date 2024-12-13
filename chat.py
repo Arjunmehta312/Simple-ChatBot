@@ -9,13 +9,14 @@ from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
-# Enable CORS for the frontend running on Live Server 
+# Enable CORS for your frontend URL
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://127.0.0.1:5500"],  # Frontend URL
+    allow_origins=["https://icy-river-0f21cad0f.4.azurestaticapps.net"],  # Frontend URL
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 # Mount static files for serving CSS and JS
 app.mount("/static", StaticFiles(directory="static"), name="static")
