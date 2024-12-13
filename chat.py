@@ -9,10 +9,9 @@ from fastapi.responses import HTMLResponse
 
 app = FastAPI()
 
-# Enable CORS for your frontend URL
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://icy-river-0f21cad0f.4.azurestaticapps.net"],  # Frontend URL
+    allow_origins=["http://127.0.0.1:5500"],  # Change this if Live Server runs on a different URL
     allow_methods=["*"],
     allow_headers=["*"],
 )
